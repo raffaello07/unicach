@@ -4,8 +4,8 @@
 					<h2 class="pageSection-title1 text-center noticias-title">&Uacute;ltimas<strong> Noticias</strong></h2>
 					<div id="noticias-carousel" class="util-carousel features-carousel">
 						
-                        <?php /*
-							include('./lib/dbagencia.php');
+                        <?php 
+							include('../src/dbagencia.php');
 							$result=mysql_query("SELECT * FROM boletines WHERE publicar='1' ORDER BY fecha DESC LIMIT 8");
 while($row = mysql_fetch_array($result)) {
 							$imagenArticulo=substr($row['fecha'],2,2)."".substr($row['fecha'],5,2)."".$row['id_boletin']."-1.jpg";
@@ -28,7 +28,7 @@ while($row = mysql_fetch_array($result)) {
 								</p>
 							</a>
 						</div>
-						<?php } */ ?>                    
+						<?php } ?>                    
 					</div>
 				</div><!-- container -->
 			</div>	
