@@ -67,10 +67,11 @@
 						
 					</ul>
 				</div>
+				<?php if(!isset($_GET["q"])){  ?>
 				<form role="search" action="gcs.php" class="navbar-form navbar-right searchform" ng-controller="BusquedaController">
 					<div class="form-group searchform-group">
 						<div class="input-group">
-							<input type="text" autocomplete="off" name="q" class="form-control searchInput" placeholder="Buscar..." ng-model="queryInput" ng-keypress="buscar(queryInput)";>
+							<input type="text" autocomplete="off" name="q" class="form-control searchInput" placeholder="Buscar..." ng-model="queryInput" ng-keypress="buscar(queryInput);">
 							<span class="input-group-btn">
 							<button class="btn btn-default searchBtn" type="submit"><i class="fa fa-search"></i></button>
 						</span>
@@ -107,6 +108,25 @@
 						</section>
 					</div>
 				</form>
+				<?php 
+					
+					}else{ 
+					
+				?>
+				
+				<form role="search" action="gcs.php" class="navbar-form navbar-right searchform">
+					<div class="form-group searchform-group">
+						<div class="input-group">
+							<input type="text" autocomplete="off" name="q" class="form-control searchInput" placeholder="Buscar..." value="<?php echo htmlentities($_GET["q"]);?>">
+							<span class="input-group-btn">
+							<button class="btn btn-default searchBtn" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+						</div>
+					</div>
+				</form>
+				<?php 
+					} 
+					?>
 			</div>
 		</nav>
 		
