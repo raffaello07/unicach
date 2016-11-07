@@ -39,13 +39,14 @@
 .big-link:hover,.big-link-ico:hover{ text-decoration: none; color: black;}
 .big-link-row{margin-top: -81px; z-index: 10}
 
+@media (min-width: 768px){
+	.searchResults{ max-height: 500px; overflow: auto; }
+}
+
 @media (max-width: 991px) {
 
 	.searchform{ width: 100%;   margin: 0;  float: none; padding: 10px;}
 	.searchform-group, .searchform-group .input-group{width: 100%;}
-	
-	
-	.searchResults{ margin-top: 0; left: 0; right: 0;}
 
 	#colapsemenu { float: none;}
 
@@ -56,11 +57,16 @@
 	.big-link-row{ margin-top: 0;}
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+	.searchResults{ margin-top: 10px; left: 16.67%;}
+}
 
 @media (max-width: 767px) {
 	.footer-copyr{text-align: center;}
 	.footer-col{ padding-left: 20%;}
 	
 	.navbar-default{height: 104px;}
+	
+	.searchResults{ margin-top: 10px; left: 0; right: 0;}
 	
 }
