@@ -1,0 +1,4 @@
+/vendor/
+/web/images/*
+**/.DS_Store
+/web/assets/base/media/*
