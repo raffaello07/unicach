@@ -62,7 +62,7 @@ while($row = mysql_fetch_array($result)) {
 						<div class="col-sm-8 col-md-6 text-center uv-col">
 							<h2 class="pageSection-title1 text-center uv-title">Universidad Virtual</h2>
 							<p class="uv-parrafo">Educaci&oacute;n a distancia mas cerca de ti</p>
-							<a class="uv-link" href="https://www.unicachvirtual.mx/siva/" target="_blank" id="button-uv-entrar"> Entrar </a>
+							<a class="btn btn-primary uv-btn" href="https://www.unicachvirtual.mx/siva/" target="_blank"> Entrar </a>
 						</div>
 					</div>
 				</div>

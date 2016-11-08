@@ -6,31 +6,44 @@
         </div>
        
        
-       <div  class="clearfix" style="background-color:#353942; color:white;" >
+       <div  class="clearfix footer-container pageSection" >
       
        <div class="container" >
 				<div class="row footer-row">
                 <small>
-					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>Sitio web</strong></h5>
-						<ul class="footer-list" >
-							<li><a href="" class="footer-link" style="color:white;" style="color:white;">Mapa del sitio</a></li>
-							<li><a href="" class="footer-link" style="color:white;">Webmaster</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>Servicios</strong></h5>
+                <div class="col-sm-6 footer-col">
+						<h5 class="h5"><strong>Unidades Administrativas</strong></h5>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link" style="color:white;">Cl&iacute;nicas</a></li>
+							<li><a href="" class="footer-link">Abogado General</a></li>
+							<li><a href="" class="footer-link">Secretaría Académica</a></li>
+							<li><a href="http://escolares.unicach.mx/" class="footer-link">Dirección de Servicios Escolares</a></li>
+							<li><a href="" class="footer-link">Dirección de Competitividad e Innovación</a></li>
+							<li><a href="http://extension.unicach.mx/" class="footer-link">Dirección de Extensión</a></li>
+							<li><a href="http://dp.unicach.mx/" class="footer-link">Dirección de Planeación</a></li>
+							<li><a href="http://cuid.unicach.mx/" class="footer-link">Centro Universitario de Información y Documentación</a></li>
+							<li><a href="http://dtic.unicach.mx/" class="footer-link">Dirección de Tecnologías de Información y Comunicaciones</a></li>
 						</ul>
+				
 					</div>
-					<div class="col-sm-4 footer-col">
+					<div class="col-sm-3 footer-col">
 						<h5 class="h5"><strong>UNICACH</strong></h5>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link" style="color:white;">Local&iacute;zanos</a></li>
-							<li><a href="" class="footer-link" style="color:white;">Vacantes</a></li>
+							<li><a href="" class="footer-link">Local&iacute;zanos</a></li>
+							<li><a href="" class="footer-link">Vacantes</a></li>
+						</ul>
+						<h5 class="h5"><strong>Servicios</strong></h5>
+						<ul class="footer-list">
+							<li><a href="" class="footer-link">Cl&iacute;nicas</a></li>
 						</ul>
 					</div>
+					<div class="col-sm-3 footer-col">
+						<h5 class="h5"><strong>Sitio web</strong></h5>
+						<ul class="footer-list" >
+							<li><a href="" class="footer-link">Mapa del sitio</a></li>
+							<li><a href="" class="footer-link">Webmaster</a></li>
+						</ul>
+					</div>
+					
                     </small>
 				</div>
 				
