@@ -782,7 +782,7 @@ html[xmlns] .slides {display: block;}
     padding-top:0;
 }
 #content-container {
-    padding-top:130px; /*ubicación submenu*/
+    padding-top:140px; /*ubicación submenu*/
 }
 #content {
     width:1125px;

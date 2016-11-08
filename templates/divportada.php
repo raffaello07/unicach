@@ -1,5 +1,5 @@
     
-			<div class="pageSection pageSection-noticias" style="margin-top:4%;">
+			<div class="pageSection pageSection-noticias">
 				<div class="container">
 					<h2 class="pageSection-title1 text-center noticias-title">&Uacute;ltimas<strong> Noticias</strong></h2>
 					<div id="noticias-carousel" class="util-carousel features-carousel">
