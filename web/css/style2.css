@@ -26,7 +26,7 @@
 
 .pageSection-uv{ font-size: 28px; font-weight: 200; color: #00789c; background-image:url('../images/b1.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment:fixed;  margin-top: 20px;}
 .uv-title{ color: #342b4e; font-size: 36px; margin-top: 0;}
-.uv-col{ padding-top: 45px; padding-bottom: 25px;}
+.uv-col{ padding-top: 3px; padding-bottom: 15px;}
 .uv-parrafo{ margin: 0;}
 
 .pageSection-adicional{ background-color: #f2f2f2; padding-bottom: 15px;}

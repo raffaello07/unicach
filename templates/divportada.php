@@ -14,21 +14,21 @@ while($row = mysql_fetch_array($result)) {
 							
 						?>
                         <div class="item">
-							 <?php if (file_exists("./extension/agencia/images/boletines/".$imagenArticulo.".jpg")){ ?>
+							 <?php if (file_exists("../../extension/agencia/images/boletines/".$imagenArticulo.".jpg")){ ?>
 							<a href="#">
-								<img src="./extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>.jpg" alt="<?php echo $row['cabeza']; ?>"  /> <?php } else{ ?>
-                                 <a href="#" target="_top"><img src="./extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $row['cabeza']; ?>"  width="250" height="300" /> <?php } ?>
+								<img src="../../extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>.jpg" alt="<?php echo $row['cabeza']; ?>"  /> <?php } else{ ?>
+                                 <a href="#" target="_top"><img src="../../extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $row['cabeza']; ?>"  width="250" height="300" /> <?php } ?>
 								<span class="text-muted m-l-sm pull-right">
         	<i class="fa fa-calendar-o"></i><small><small>
             <?php echo $fecha[2]."&bull; ".$fecha[1]."&bull; ".$fecha[0]; ?>	</small></small>	</span>
             <br><br><small><small>
-								<a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($row['id_boletin']); ?>" target="_blank"><h4><?php echo substr($row['cabeza'],0,60); ?>...</h4></a></small></small>
+								<a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($row['id_boletin']); ?>" target="_blank"><h4><?php echo substr($row['cabeza'],0,54); ?>...</h4></a></small></small>
 								<p>
 									<?php echo substr($row['sumario'],0,80)."..."; ?>
 								</p>
 							</a>
 						</div>
-						<?php } ?>                    
+						<?php }  ?>                    
 					</div>
 				</div><!-- container -->
 			</div>	
@@ -43,9 +43,9 @@ while($row = mysql_fetch_array($result)) {
 					while($row = mysql_fetch_array($result)) { ?>
 						
 						<div class="item" style="width:195px;">
-                        <?php if (file_exists("./extension/carteles/".$row['imagen'])){ ?>
-							<a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"> <img src="./extension/carteles/<?php echo $row['imagen']; ?>" alt="<?php echo $row['titulo']; ?>"  /><span></span></a> <?php } else{ ?>
-                           <a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"><img src="./extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  /></a>
+                        <?php if (file_exists("../../extension/carteles/".$row['imagen'])){ ?>
+							<a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"> <img src="../../extension/carteles/<?php echo $row['imagen']; ?>" alt="<?php echo $row['titulo']; ?>"  /><span></span></a> <?php } else{ ?>
+                           <a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  /></a>
                             <?php } ?>
 						</div>
                     <?php } ?>
@@ -57,12 +57,12 @@ while($row = mysql_fetch_array($result)) {
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4 col-md-6">
-							<img src="images/logo_uv.png" class="img-responsive center-block" alt="Logo Universidad Virtual" style="max-height: 180px;">
+							<img src="images/logo_uv.png" class="img-responsive center-block" alt="Logo Universidad Virtual" style="max-height: 140px;">
 						</div>
 						<div class="col-sm-8 col-md-6 text-center uv-col">
 							<h2 class="pageSection-title1 text-center uv-title">Universidad Virtual</h2>
-							<p class="uv-parrafo">Educaci&oacute;n a distancia m&aacute;s cerca de t&iacute;.</p>
-							<a class="uv-link" href="https://www.unicachvirtual.mx/siva/" target="_blank"> Entrar >> </a>
+							<p class="uv-parrafo">Educaci&oacute;n a distancia mas cerca de ti</p>
+							<a class="uv-link" href="https://www.unicachvirtual.mx/siva/" target="_blank" id="button-uv-entrar"> Entrar </a>
 						</div>
 					</div>
 				</div>
@@ -78,9 +78,9 @@ while($row = mysql_fetch_array($result)) {
 					while($row = mysql_fetch_array($result)) { ?>
 						<div class="item">
                         
-                        <?php if (file_exists("./extension/libreria/img/".$row['codigo'].".jpg")){ ?>
-							<a href="#" target="_top"> <img src="./extension/libreria/img/<?php echo $row['codigo']; ?>.jpg" alt="<?php echo $row['titulo']; ?>" width="250" height="300"  /><span><small><?php echo $row['titulo']; ?></small></span> </a> <?php } else{ ?>
-                           <a href="#" target="_top"><img src="./extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  width="250" height="300" /><span><small><?php echo $row['titulo']; ?></small></span> </a>
+                        <?php if (file_exists("../../extension/libreria/img/".$row['codigo'].".jpg")){ ?>
+							<a href="#" target="_top"> <img src="../../extension/libreria/img/<?php echo $row['codigo']; ?>.jpg" alt="<?php echo $row['titulo']; ?>" width="250" height="300"  /><span><small><?php echo $row['titulo']; ?></small></span> </a> <?php } else{ ?>
+                           <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  width="250" height="300" /><span><small><?php echo $row['titulo']; ?></small></span> </a>
                             <?php } ?>
                             
 						</div>
@@ -88,12 +88,7 @@ while($row = mysql_fetch_array($result)) {
 					</div>
 				</div>
 			</div>
-			<div align="center" class="clearfix">
-	            <a href="https://www.unicach.mx/_/masterpage.php?pag=POSGRA2" class="col-md-4 col-lg-2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img1','','images/footer/01.jpg',1)"><img src="./images/footer/01_off.jpg" class="img-responsive" alt="Posgrados vigentes" height="100" id="img1"></a>
-	            <a href="http://escolares.unicach.mx/masterpage.php?pag=CALENDARIO_ESCOLAR" class="col-md-4 col-lg-2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img2','','images/footer/02.jpg',1)"><img src="./images/footer/02_off.jpg" class="img-responsive" alt="Calendario escolar " height="100" id="img2"></a>
-	            <a href="http://www.unicach.mx/script/licitaciones/" class="col-md-4 col-lg-2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img3','','images/footer/03.jpg',1)"><img src="./images/footer/03_off.jpg" class="img-responsive" alt="Conoce nuestras licitaciones" height="100" id="img3"></a>
-	            <a href="http://contraloria-social.unicach.mx/" class="col-md-4 col-lg-2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img4','','images/footer/04.jpg',1)"><img src="./images/footer/04_off.jpg" class="img-responsive" alt="ContralorÃ­a Social" height="100" id="img4"></a>
-	            <a href="http://escolares.unicach.mx/" class="col-md-4 col-lg-2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('img5','','images/footer/05.jpg',1)"><img src="./images/footer/05_off.jpg" class="img-responsive" alt="DireciÃ³n de Servicios Escolares" height="100" id="img5"></a>
-	            <a href="http://escolares.unicach.mx/masterpage.php?pag=B3CA5_VIG3NT35" class="col-md-4 col-lg-2" title="Becas vigentes" onmouseover="MM_swapImage('img6','','images/footer/06.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="./images/footer/06_off.jpg" class="img-responsive" alt="" height="100" id="img6"></a>
+			<div align="center" class="clearfix">         
 	            
+                <a href="https://www.unicach.mx/_/masterpage.php?pag=POSGRA2" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img1','','./images/footer/01.jpg',1)"><img src="./images/footer/01_off.jpg" alt="Posgrados vigentes" height="100" id="img1"></a><a href="http://escolares.unicach.mx/masterpage.php?pag=CALENDARIO_ESCOLAR" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img2','','images/footer/02.jpg',1)"><img src="images/footer/02_off.jpg" alt="Calendario escolar " height="100"  id="img2"></a><a href="http://www.unicach.mx/script/licitaciones/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img3','','images/footer/03.jpg',1)"><img src="images/footer/03_off.jpg" alt="Conoce nuestras licitaciones" height="100" id="img3"></a><a href="http://contraloria-social.unicach.mx/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img4','','images/footer/04.jpg',1)"><img src="images/footer/04_off.jpg" alt="Contraloría Social" height="100" id="img4"></a><a href="http://escolares.unicach.mx/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img5','','images/footer/05.jpg',1)"><img src="images/footer/05_off.jpg" alt="Direción de Servicios Escolares" height="100" id="img5"></a><a href="http://escolares.unicach.mx/masterpage.php?pag=B3CA5_VIG3NT35" title="Becas vigentes" onMouseOver="MM_swapImage('img6','','images/footer/06.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/footer/06_off.jpg" alt="" height="100" id="img6"></a>
 	        </div>
