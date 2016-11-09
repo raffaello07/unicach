@@ -4,7 +4,7 @@
 
 
 	$grupo = base64_decode(isset($_GET['tag']) ? $_GET['tag'] : NULL);
-	include('lib/dbconex.php');
+	include('../src/dbconex.php');
 	$result=mysql_query("SELECT *FROM cat_header where url_friendly='".$grupo."' order by rand ()");
 		$vuelta=0;
 		while($row = mysql_fetch_array($result)) {
@@ -44,7 +44,7 @@
     </header>
     <main>
 	    <div class="container">
-	        <div class="row">
+	        <div class="row" style="margin-top: 150px;">
 	            <nav id="nav-sub-container" class="clearfix">
 	                <ul id="nav-sub">
 	                <?php 

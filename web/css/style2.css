@@ -21,7 +21,7 @@
 .pageSection{ margin-bottom: 15px; padding-top: 15px;}
 .pageSection-title1{ margin: 0;}
 
-.pageSection-noticias{ background-color: #f2f2f2; margin-top: 15px;}
+.pageSection-noticias{ background-color: #f2f2f2; margin-top: 10px;}
 .noticias-title{ margin-bottom: 15px; }
 
 .pageSection-uv{ font-size: 28px; font-weight: 200; color: #00789c; background-image:url('../images/b1.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment:fixed;  margin-top: 20px; padding-bottom: 15px;}
@@ -41,20 +41,22 @@
 .big-link{
 	display: block; 
 	font-size: 1em; 
-	padding-top: 30px; 
-	padding-bottom: 30px; 
+	padding-top: 15px; 
+	padding-bottom: 15px; 
 	background-color: #fff;
-	color: #666; 
-	background: -moz-linear-gradient(left, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.95) 100%); /* FF3.6-15 */ 
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0.95) 0%,rgba(240,240,240,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, rgba(255,255,255,0.95) 0%,rgba(240,240,240,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: #555;
+	font-weight: normal; 
+	background: -moz-linear-gradient(left, rgba(255,255,255,0.8) 0%, rgba(194,194,194,0.8) 100%); /* FF3.6-15 */ 
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0.8) 0%,rgba(194,194,194,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(255,255,255,0.8) 0%,rgba(194,194,194,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=1 ); /* IE6-9 */
-	z-index: 99; 
-	border: 1px solid rgba(240,240,240,0.95); 
+	z-index: 99;
+	border-bottom: 1px solid #c2c2c2;
 }
 .big-link-ico{ margin-bottom: 15px; margin-left: auto; margin-right: auto; display: block;}
 .big-link:hover,.big-link-ico:hover{ text-decoration: none; color: black;}
-.big-link-row{margin-top: -81px; z-index: 10}
+.big-link-row{margin-top: -120px; z-index: 10}
+.big-link-p{ margin: 0; }
 
 .footer-link{ color: white;}
 .footer-container{background-color:#353942; color:white; margin-bottom: 0 !important;}
