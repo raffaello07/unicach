@@ -94,7 +94,7 @@
 							<img src="images/cuid2.png" class="img-responsive center-block cuid-img" alt="Logo CUID" style="max-height: 140px;">
 						</div>
 						<div class="col-sm-4 col-md-6 text-center cuid-col">
-							<p class="cuid-parrafo">Encuentra la información que buscas en un click</p>
+							<p class="cuid-parrafo">Encuentra la informaci&#243n que buscas en un click</p>
 							<a class="btn btn-primary cuid-btn" href="http://cuid.unicach.mx" target="_blank"> Entrar </a>
 						</div>
 					</div>

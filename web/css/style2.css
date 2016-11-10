@@ -87,6 +87,11 @@
 	.pageSection-cuid{ padding-top: 44px; padding-bottom: 44px; }
 }
 
+@media (max-width: 1199px){
+	
+	#colapsemenu { float: none;}
+}
+
 @media (max-width: 991px) {
 	
 	.cuid-parrafo{ font-size: 18px;}
@@ -125,5 +130,4 @@
 @media (min-width: 768px) and (max-width: 1199px){
 	.searchform{ width: 100%;   margin: 0;  float: none; padding: 10px;}
 	.searchform-group, .searchform-group .input-group{width: 100%;}
-	#colapsemenu { float: none;}
 }
