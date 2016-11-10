@@ -14,7 +14,7 @@
 		}
 		
 	?>
-<body class="about" style="background-image: url(images/header/<?php echo $imgHeader; ?>); background-repeat:no-repeat;">
+<body class="about about-body" style="background-image: url(images/header/<?php echo $imgHeader; ?>);">
 	<header id="main-header" class="clearfix">
         <div id="header-full" class="clearfix">
             <div id="header" class="clearfix">
@@ -43,45 +43,35 @@
 	   ?>
     </header>
     <main>
-	    <div class="container">
-	        <div class="row" style="margin-top: 150px;">
-	            <nav id="nav-sub-container" class="clearfix">
-	                <ul id="nav-sub">
-	                <?php 
-					$result_sub=mysql_query("SELECT * FROM cat_informacion WHERE id_menu='".$idPertenece."' AND status='1' ORDER BY orden asc");
-		   			while($row_sub = mysql_fetch_array($result_sub)) { 
-						if ($row_sub['url']==NULL){
-					?>
-	                    <li class="<?php if ($grupo==$row_sub['url_friendly']){ echo 'current-menu-item'; }?>"><a href="./informacion.php?tag=<?php echo base64_encode($row_sub['url_friendly']);?>"><small><?php echo $row_sub['tab_nombre']; ?></small></a></li>
-	                    <?php }else{ ?>
-	                    <li class="<?php if ($grupo==$row_sub['url_friendly']){ echo 'current-menu-item'; }?>"><a href="<?php echo $row_sub['url'];?>" target="<?php echo $row_sub['target']; ?>"><small><?php echo $row_sub['tab_nombre']; ?></small></a></li>
-	                    <?php } }?>
-	                   
+	    <div class="container-fluid">  
+	        <div class="row content-row">
+		        <div class="col-sm-4 col-md-3 col-lg-2 col-md-offset-1 col-lg-offset-2 lateral navbar">
+			        <div class="navbar-header">
+						<button type="button" class="navbar-toggle lateral-submenu-toggle" data-toggle="collapse" data-target="#colapsubmemenu">
+							<i class="fa fa-chevron-down" aria-hidden="true"></i>
+						</button>
+					</div>
+			        <ul class="lateral-submenu collapse navbar-collapse" id="colapsubmemenu">
+				        <?php 
+						$result_sub=mysql_query("SELECT * FROM cat_informacion WHERE id_menu='".$idPertenece."' AND status='1' ORDER BY orden asc");
+			   			while($row_sub = mysql_fetch_array($result_sub)) { 
+							if ($row_sub['url']==NULL){
+						?>
+	                	<li class="lateral-submenu-item"><a href="./informacion.php?tag=<?php echo base64_encode($row_sub['url_friendly']);?>" class="lateral-submenu-link <?php if ($grupo==$row_sub['url_friendly']){ echo ' lateral-submenu-active'; }?>"><?php echo $row_sub['tab_nombre']; ?></a></li>
+	                	<?php }else{ ?>
+						<li class="lateral-submenu-item"><a href="<?php echo $row_sub['url'];?>" target="<?php echo $row_sub['target']; ?>" class="lateral-submenu-link <?php if ($grupo==$row_sub['url_friendly']){ echo ' lateral-submenu-active'; }?>"><?php echo $row_sub['tab_nombre']; ?></a></li>
+						<?php } }?>
+	                
+	                    	                   
 	                </ul>
-	            </nav>
-	        </div>
-	        <div class="row">
-	            <div class="col-lg-12">
-	                <article class="static-page">
-	                    <h1 id="main-title"><?php echo $tituloContenido; ?></h1><hr>
-	                    <?php echo $contenido; ?>
-	                    
-	                </article>
-	            </div>
-	        </div>    
-	            <!--
-	            <div id="sidebar">
-	                <aside class="widget-container">
-	                    <div class="widget-wrapper clearfix">
-					        <h3 class="widget-title">Submenu</h3>
-	                        <ul>
-	                            <li><a href="#"></a></li>
-	                            
-	                        </ul>
-	                    </div>
-	                </aside>
+		        </div>
+	            <div class="col-sm-8 content-col">
+		            <div class="col-sm-12 col-md-11 col-lg-10">
+		                <article class="static-page">
+		                    <h1 class="content-title"><?php echo $tituloContenido; ?></h1><hr>
+							<?php echo $contenido; ?>
+		                </article>
 	                </div>
-	                -->
 	            </div>
 	        </div>
 	    </div>
