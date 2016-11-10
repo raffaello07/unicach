@@ -40,7 +40,10 @@
 			margin-right: 0;
 			margin-bottom: 0px;
 		}
-	</style> 
+	</style>
+	
+	<link rel="icon" type="image/png" href="./images/favicon.png" />
+	<link rel="apple-itouch-icon" href="./images/favicon.png">  
 	
     <script src="./lib/angular/angular.min.js"></script>
 	<script type="text/javascript" src="./lib/angular/angular-sanitize.min.js"></script>

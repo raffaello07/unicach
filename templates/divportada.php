@@ -77,10 +77,11 @@
                                 <?php if (file_exists("../../extension/libreria/img/".$libro['codigo'].".jpg")){ ?>
 							<a href="#" target="_top"> <img src="../../extension/libreria/img/<?php echo $libro['codigo']; ?>.jpg" alt="<?php echo $libro['titulo']; ?>" width="250" height="300"  /><span><small><small><?php echo $libro['titulo']; ?></small></small></span> </a> <?php } else{ ?>
                            <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $libro['titulo']; ?>"  width="250" height="300" /><span><small><small><?php echo $libro['titulo']; ?></small></small></span> </a>
-                            <?php } ?>
+                            <?php }  ?>
                             
 								
 								</div>
+								 
 							<?php } ?>
 					</div>
 				</div>

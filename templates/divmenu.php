@@ -1,6 +1,6 @@
 <?php include('../src/dbconex.php');
-			$result_sub=mysql_query("SELECT * FROM cat_informacion WHERE url_friendly='".$grupo."' ORDER BY id_menu asc");
-			while($row_sub = mysql_fetch_array($result_sub)) { 
+			$result_sub=$db_conexion->query("SELECT * FROM cat_informacion WHERE url_friendly='".$grupo."' ORDER BY id_menu asc");
+			while($row_sub = $result_sub->fetch_assoc()) { 
 				$perteneceMenu=$row_sub['id_menu'];
 			} 
 ?>
@@ -23,10 +23,10 @@
 						<li class="navbar-element <?php if ($grupo==NULL){ echo 'active'; }  ?>"><a href="index.php" class="navbar-enlace">Inicio</a></li>
 						<?php
 			
-						$result=mysql_query("SELECT * FROM cat_menu WHERE publicar='1' ORDER BY orden asc");
-						while($row = mysql_fetch_array($result)) { 
-							$result_sub=mysql_query("SELECT * FROM cat_informacion WHERE id_menu='".$row['id_menu']."' AND status='1' ORDER BY orden asc");
-							if($row_sub = mysql_fetch_array($result_sub)){
+						$result=$db_conexion->query("SELECT * FROM cat_menu WHERE publicar='1' ORDER BY orden asc");
+						while($row = $result->fetch_assoc()) { 
+							$result_sub=$db_conexion->query("SELECT * FROM cat_informacion WHERE id_menu='".$row['id_menu']."' AND status='1' ORDER BY orden asc");
+							if($row_sub = $result_sub->fetch_assoc()){
 								
 						?>
 						
@@ -44,7 +44,7 @@
                                   <li ><a href="<?php echo $row_sub['url'];?>" target="<?php echo $row_sub['target']; ?>"><small><?php echo strtr($row_sub["tab_nombre"],"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"); ?></small></a></li>
                                   
                                   <?php }
-	                            while($row_sub = mysql_fetch_array($result_sub)) { 
+	                            while($row_sub = $result_sub->fetch_assoc()) { 
 									if ($row_sub['url']==NULL){
 							?>
                                     <li ><a href="./informacion.php?tag=<?php echo base64_encode($row_sub['url_friendly']);?>"><small><?php echo strtr($row_sub["tab_nombre"],"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"); ?></small></a></li>

@@ -15,8 +15,8 @@
                 	<?php
 						include('../src/dbconex.php');
 						$grupoTitulo='';
-						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='1'  ORDER BY orden asc");
-						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='1'  ORDER BY orden asc");
+						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5><?php } ?>
 						<ul class="footer-list">
 							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
@@ -27,8 +27,8 @@
 					<div class="col-sm-4 footer-col">
 						<?php
 						$grupoTitulo='';
-						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='2'  ORDER BY orden asc");
-						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='2'  ORDER BY orden asc");
+						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
 							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
@@ -38,8 +38,8 @@
 					<div class="col-sm-3 footer-col">
 						<?php
 						$grupoTitulo='';
-						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='3'  ORDER BY orden asc");
-						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='3'  ORDER BY orden asc");
+						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
 							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>

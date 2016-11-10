@@ -1,11 +1,13 @@
 <?php
+	header('Content-Type: text/html; charset=iso-8859-1');
 	require_once '../src/dbconex.php';
 	require_once '../src/dbagencia.php';
-	require_once 'libros.php';
-	require_once 'noticias.php';
-	require_once 'carteles.php';
+	require_once '../src/libros.php';
+	require_once '../src/noticias.php';
+	require_once '../src/carteles.php';
 	date_default_timezone_set("America/Mexico_City"); 
 	include('../templates/divheader.php');
+	$grupo = "";
 ?>
 
 <body class="home">
@@ -31,12 +33,12 @@
                       
     </header>
     <main>
-    <?php  include('../templates/divslider.php'); ?> 
+    <?php include('../templates/divslider.php'); ?> 
     
     <div id="content-container">
  
 				<?php
-				 include('../templates/divportada.php'); 
+					include('../templates/divportada.php'); 
 				 ?>
                
     </div>

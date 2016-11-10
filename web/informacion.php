@@ -1,13 +1,14 @@
 <?php 
+	header('Content-Type: text/html; charset=iso-8859-1');
 	date_default_timezone_set("America/Mexico_City"); 
 	include('../templates/divheader.php');
 
 
 	$grupo = base64_decode(isset($_GET['tag']) ? $_GET['tag'] : NULL);
 	include('../src/dbconex.php');
-	$result=mysql_query("SELECT *FROM cat_header where url_friendly='".$grupo."' order by rand ()");
+	$result=$db_conexion->query("SELECT *FROM cat_header where url_friendly='".$grupo."' order by rand ()");
 		$vuelta=0;
-		while($row = mysql_fetch_array($result)) {
+		while($row = $result->fetch_assoc()) {
 			if ($vuelta==0){
 				$imgHeader=$row['imagen']; 
 			}
@@ -33,8 +34,8 @@
        $grupo = base64_decode(isset($_GET['tag']) ? $_GET['tag'] : NULL);
 	   include('../templates/divmenu.php');
 	   
-	   $result_sub=mysql_query("SELECT * FROM cat_informacion WHERE url_friendly='".$grupo."' ORDER BY id_menu asc");
-	   while($row_sub = mysql_fetch_array($result_sub)) {
+	   $result_sub=$db_conexion->query("SELECT * FROM cat_informacion WHERE url_friendly='".$grupo."' ORDER BY id_menu asc");
+	   while($row_sub = $result_sub->fetch_assoc()) {
 		   	$tituloContenido=$row_sub['tab_nombre'];
 			$contenido=$row_sub['tab_contenido'];
 			$idPertenece=$row_sub['id_menu'];
@@ -53,8 +54,8 @@
 					</div>
 			        <ul class="lateral-submenu collapse navbar-collapse" id="colapsubmemenu">
 				        <?php 
-						$result_sub=mysql_query("SELECT * FROM cat_informacion WHERE id_menu='".$idPertenece."' AND status='1' ORDER BY orden asc");
-			   			while($row_sub = mysql_fetch_array($result_sub)) { 
+						$result_sub=$db_conexion->query("SELECT * FROM cat_informacion WHERE id_menu='".$idPertenece."' AND status='1' ORDER BY orden asc");
+			   			while($row_sub = $result_sub->fetch_assoc()) { 
 							if ($row_sub['url']==NULL){
 						?>
 	                	<li class="lateral-submenu-item"><a href="./informacion.php?tag=<?php echo base64_encode($row_sub['url_friendly']);?>" class="lateral-submenu-link <?php if ($grupo==$row_sub['url_friendly']){ echo ' lateral-submenu-active'; }?>"><?php echo $row_sub['tab_nombre']; ?></a></li>
