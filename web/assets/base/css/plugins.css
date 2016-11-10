@@ -4534,11 +4534,12 @@ label.control-label {
   background-size: cover;
   transition: all 0.3s;
   color: #ffffff;
-  opacity: 0.3;
+  opacity: 1;
+  top: 50% !important;
   filter: alpha(opacity=30);
 }
 .tparrows.circle.hidearrows {
-  opacity: 0;
+  opacity: 1;
   filter: alpha(opacity=0);
 }
 .tparrows.circle:hover {
