@@ -57,9 +57,6 @@ table {
 .clearfix { zoom: 1; }
 
 
-a, a:active, a:visited { color: #3a6963; outline:0; }
-a:hover { color: #9f304f; }
-
 .iconosCentro{
 	position: absolute; left: 20px; top: 20px; z-index: 100;
 }
@@ -785,7 +782,7 @@ html[xmlns] .slides {display: block;}
     padding-top:0;
 }
 #content-container {
-    padding-top:130px; /*ubicación submenu*/
+    padding-top:140px; /*ubicación submenu*/
 }
 #content {
     width:1125px;

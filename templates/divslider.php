@@ -34,25 +34,25 @@
 				<a href="" class="col-xs-6 col-sm-3 text-center big-link">
 					
 					<i class="fa fa-user fa-3x big-link-ico" aria-hidden="true"></i>
-					<p>Aspirantes</p>
+					<p class="big-link-p">Aspirantes</p>
 					
 				</a>
 				<a href="" class="col-xs-6 col-sm-3 text-center big-link">
 					
 					<i class="fa fa-users fa-3x big-link-ico" aria-hidden="true"></i>
-					<p>Alumnos</p>
+					<p class="big-link-p">Alumnos</p>
 					
 				</a>
 				<a href="" class="col-xs-6 col-sm-3 text-center big-link">
 					
 					<i class="fa fa-graduation-cap fa-3x big-link-ico" aria-hidden="true"></i>
-					<p>Egresados</p>
+					<p class="big-link-p">Egresados</p>
 					
 				</a>
 				<a href="" class="col-xs-6 col-sm-3 text-center big-link">
 					
 					<i class="fa fa-university fa-3x big-link-ico" aria-hidden="true"></i>
-					<p>Facultades</p>
+					<p class="big-link-p">Facultades</p>
 					
 				</a>
 			</div>

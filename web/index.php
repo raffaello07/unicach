@@ -1,8 +1,12 @@
-<?php 
+<?php
+	require_once '../src/dbconex.php';
+	require_once '../src/dbagencia.php';
+	require_once 'libros.php';
+	require_once 'noticias.php';
+	require_once 'carteles.php';
 	date_default_timezone_set("America/Mexico_City"); 
 	include('../templates/divheader.php');
 ?>
-
 
 <body class="home">
 
