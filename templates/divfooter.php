@@ -6,31 +6,47 @@
         </div>
        
        
-       <div  class="clearfix" style="background-color:#353942; color:white;" >
+       <div  class="clearfix footer-container pageSection" >
       
        <div class="container" >
 				<div class="row footer-row">
                 <small>
-					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>Sitio web</strong></h5>
-						<ul class="footer-list" >
-							<li><a href="" class="footer-link" style="color:white;" style="color:white;">Mapa del sitio</a></li>
-							<li><a href="" class="footer-link" style="color:white;">Webmaster</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>Servicios</strong></h5>
+                <div class="col-sm-5 footer-col">
+                	<?php
+						include('../src/dbconex.php');
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='1'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5><?php } ?>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link" style="color:white;">Cl&iacute;nicas</a></li>
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
 						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
+				
 					</div>
 					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>UNICACH</strong></h5>
+						<?php
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='2'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link" style="color:white;">Local&iacute;zanos</a></li>
-							<li><a href="" class="footer-link" style="color:white;">Vacantes</a></li>
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
 						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
 					</div>
+					<div class="col-sm-3 footer-col">
+						<?php
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='3'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
+						<ul class="footer-list">
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
+						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
+					</div>
+					
                     </small>
 				</div>
 				
@@ -87,11 +103,11 @@
 			        delay: 15000,    
 			        startwidth:1170,
 			        startheight: (App.getViewPort().width < App.getBreakpoint('md') ? 1024 : 620),
-			        navigationType: "hide",
+			        navigationType: "show",
 			        navigationArrows: "solo",
 			        touchenabled: "on",
 			        onHoverStop: "on",
-			        keyboardNavigation: "off",
+			        keyboardNavigation: "on",
 			        navigationStyle: "circle",
 			        navigationHAlign: "center",
 			        navigationVAlign: "center",
