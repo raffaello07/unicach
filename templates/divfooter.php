@@ -12,40 +12,39 @@
 				<div class="row footer-row">
                 <small>
                 <div class="col-sm-5 footer-col">
-						<h5 class="h5"><strong>Unidades Administrativas</strong></h5>
+                	<?php
+						include('../src/dbconex.php');
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='1'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5><?php } ?>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link">Abogado General</a></li>
-							<li><a href="" class="footer-link">Secretaría Académica</a></li>
-							<li><a href="http://escolares.unicach.mx/" class="footer-link">Dirección de Servicios Escolares</a></li>
-							<li><a href="http://extension.unicach.mx/" class="footer-link">Dirección de Extensión Universitaria</a></li>
-							<li><a href="http://dp.unicach.mx/" class="footer-link">Dirección de Planeación</a></li>
-							<li><a href="http://cuid.unicach.mx/" class="footer-link">Centro Universitario de Información y Documentación</a></li>
-							<li><a href="http://dtic.unicach.mx/" class="footer-link">Dirección de Tecnologías de Información y Comunicaciones</a></li>
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
 						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
 				
 					</div>
 					<div class="col-sm-4 footer-col">
-						<h5 class="h5"><strong>Servicios</strong></h5>
+						<?php
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='2'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link">Cl&iacute;nicas</a></li>
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
 						</ul>
-						<h5 class="h5"><strong>Centros de Investigaciones</strong></h5>
-						<ul class="footer-list">
-							<li><a href="http://ceico.unicach.mx" target="_blank" class="footer-link">Centro de Investigaciones Costeras</a></li>
-							<li><a href="http://cesmeca.unicach.mx" target="_blank" class="footer-link">CESMECA</a></li>
-						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
 					</div>
 					<div class="col-sm-3 footer-col">
-						<h5 class="h5"><strong>UNICACH</strong></h5>
+						<?php
+						$grupoTitulo='';
+						$result=mysql_query("SELECT  *FROM  cat_footer WHERE columna='3'  ORDER BY orden asc");
+						while($row = mysql_fetch_array($result)) { if ($grupoTitulo<>$row['grupo']){?>
+						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
-							<li><a href="" class="footer-link">Local&iacute;zanos</a></li>
-							<li><a href="" class="footer-link">Vacantes</a></li>
+							<li><a href="<?php echo $row['link']; ?>"  target="<?php echo $row['target']; ?>" class="footer-link"><?php echo $row['nombre']; ?></a></li>
 						</ul>
-						<h5 class="h5"><strong>Sitio web</strong></h5>
-						<ul class="footer-list" >
-							<li><a href="" class="footer-link">Mapa del sitio</a></li>
-							<li><a href="" class="footer-link">Webmaster</a></li>
-						</ul>
+                        <?php $grupoTitulo=$row['grupo']; } ?>
 					</div>
 					
                     </small>

@@ -5,30 +5,28 @@
 					<div id="noticias-carousel" class="util-carousel features-carousel">
 						
                         <?php 
-							include('../src/dbagencia.php');
-							$result=mysql_query("SELECT * FROM boletines WHERE publicar='1' ORDER BY fecha DESC LIMIT 8");
-while($row = mysql_fetch_array($result)) {
-							$imagenArticulo=substr($row['fecha'],2,2)."".substr($row['fecha'],5,2)."".$row['id_boletin']."-1.jpg";
-							
-							$fecha=explode('-',$row['fecha']);
-							
-						?>
-                        <div class="item">
-							 <?php if (file_exists("../../extension/agencia/images/boletines/".$imagenArticulo.".jpg")){ ?>
+							while ($boletin = $boletinesResultado->fetch_assoc()){
+								$imagenArticulo=substr($boletin['fecha'],2,2)."".substr($boletin['fecha'],5,2)."".$boletin['id_boletin']."-1.jpg";
+								$fecha=explode('-',$boletin['fecha']);
+								 ?>
+						<div class="item">
+                         
+                            
+                             <?php if (file_exists("../../extension/agencia/images/boletines/".$imagenArticulo)){ ?>
 							<a href="#">
-								<img src="../../extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>.jpg" alt="<?php echo $row['cabeza']; ?>"  /> <?php } else{ ?>
-                                 <a href="#" target="_top"><img src="../../extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $row['cabeza']; ?>"  width="250" height="300" /> <?php } ?>
+								<img src="../../extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>" alt="<?php echo $boletin['cabeza']; ?>"  /> <?php } else{ ?>
+                                 <a href="#" target="_top"><img src="../../extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $boletin['cabeza']; ?>"  width="250" height="300" /> <?php } ?>
 								<span class="text-muted m-l-sm pull-right">
         	<i class="fa fa-calendar-o"></i><small><small>
             <?php echo $fecha[2]."&bull; ".$fecha[1]."&bull; ".$fecha[0]; ?>	</small></small>	</span>
             <br><br><small><small>
-								<a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($row['id_boletin']); ?>" target="_blank"><h4><?php echo substr($row['cabeza'],0,54); ?>...</h4></a></small></small>
+								<a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($boletin['id_boletin']); ?>" target="_blank"><h4><?php echo $boletin['cabeza']; ?></h4></a></small></small>
 								<p>
-									<?php echo substr($row['sumario'],0,80)."..."; ?>
+									<?php echo substr($boletin['sumario'],0,80)."..."; ?>
 								</p>
 							</a>
 						</div>
-						<?php }  ?>                    
+						<?php }  ?>                  
 					</div>
 				</div><!-- container -->
 			</div>	
@@ -37,18 +35,18 @@ while($row = mysql_fetch_array($result)) {
 				<div class="container">
 					<h2 class="pageSection-title1 text-center eventos-title">Carteles</h2>
 					<div id="eventos-carousel" class="util-carousel top-nav-box">
-                    <?php
-					$fechaActual=date('Y-m-d');
-					$result=mysql_query("SELECT * FROM carteles WHERE status='A' AND fecha_termino>'".$fechaActual."' ORDER BY id DESC LIMIT 10");
-					while($row = mysql_fetch_array($result)) { ?>
-						
-						<div class="item" style="width:195px;">
-                        <?php if (file_exists("../../extension/carteles/".$row['imagen'])){ ?>
-							<a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"> <img src="../../extension/carteles/<?php echo $row['imagen']; ?>" alt="<?php echo $row['titulo']; ?>"  /><span></span></a> <?php } else{ ?>
-                           <a href="<?php echo $row['link']; ?>" target="<?php echo $row['target']; ?>"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  /></a>
+                    <?php 
+							while ($cartel = $cartelesResultado->fetch_assoc()){ ?>
+								<div class="item">                              
+                                                            
+                                <?php if (file_exists("../../extension/carteles/".$cartel['imagen'])){ ?>
+							<a href="#" target="_top"> <img src="../../extension/carteles/<?php echo $cartel['imagen']; ?>" alt="<?php echo $cartel['titulo']; ?>" width="250" height="300"  /> </a> <?php } else{ ?>
+                           <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $cartel['titulo']; ?>"  width="250" height="300" /></a>
                             <?php } ?>
-						</div>
-                    <?php } ?>
+                            
+								
+								</div>
+							<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -72,19 +70,18 @@ while($row = mysql_fetch_array($result)) {
 				<div class="container">
 					<h2 class="pageSection-title1 text-center libros-title">Publicaciones</h2>
 					<div id="libros-carousel" class="util-carousel top-nav-box">
-                    <?php
-					$fechaActual=date('Y-m-d');
-					$result=mysql_query("SELECT * FROM cat_libreria ORDER BY rand() LIMIT 10");
-					while($row = mysql_fetch_array($result)) { ?>
-						<div class="item">
-                        
-                        <?php if (file_exists("../../extension/libreria/img/".$row['codigo'].".jpg")){ ?>
-							<a href="#" target="_top"> <img src="../../extension/libreria/img/<?php echo $row['codigo']; ?>.jpg" alt="<?php echo $row['titulo']; ?>" width="250" height="300"  /><span><small><?php echo $row['titulo']; ?></small></span> </a> <?php } else{ ?>
-                           <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $row['titulo']; ?>"  width="250" height="300" /><span><small><?php echo $row['titulo']; ?></small></span> </a>
+                    <?php 
+							while ($libro = $librosResultado->fetch_assoc()){ ?>
+								<div class="item">
+                                
+                                <?php if (file_exists("../../extension/libreria/img/".$libro['codigo'].".jpg")){ ?>
+							<a href="#" target="_top"> <img src="../../extension/libreria/img/<?php echo $libro['codigo']; ?>.jpg" alt="<?php echo $libro['titulo']; ?>" width="250" height="300"  /><span><small><small><?php echo $libro['titulo']; ?></small></small></span> </a> <?php } else{ ?>
+                           <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $libro['titulo']; ?>"  width="250" height="300" /><span><small><small><?php echo $libro['titulo']; ?></small></small></span> </a>
                             <?php } ?>
                             
-						</div>
-                        <?php } ?>
+								
+								</div>
+							<?php } ?>
 					</div>
 				</div>
 			</div>
