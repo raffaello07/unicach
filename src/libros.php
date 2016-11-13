@@ -1,2 +1,2 @@
 <?php
-	$librosResultado = $mysqliAgencia->query("SELECT codigo, titulo FROM `cat_libreria` ORDER BY rand() LIMIT 10");
+	$librosResultado = $mysqliAgencia->query("SELECT codigo, titulo, publicar FROM `cat_libreria` WHERE publicar='1' ORDER BY rand() LIMIT 10");
