@@ -13,9 +13,9 @@
                          
                             
                              <?php if (file_exists("../../extension/agencia/images/boletines/".$imagenArticulo)){ ?>
-							<a href="#">
-								<img src="../../extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>" alt="<?php echo $boletin['cabeza']; ?>"  /> <?php } else{ ?>
-                                 <a href="#" target="_top"><img src="../../extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $boletin['cabeza']; ?>"  width="250" height="300" /> <?php } ?>
+							<a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($boletin['id_boletin']); ?>" target="_blank">
+								<img src="../../extension/agencia/images/boletines/<?php echo $imagenArticulo; ?>" alt="<?php echo $boletin['cabeza']; ?>"  /></a> <?php } else{ ?>
+                                 <a href="http://agencia.unicach.mx/articulo.php?tag=<?php echo base64_encode($boletin['id_boletin']); ?>" target="_blank"><img src="../../extension/agencia/images/boletines/boletin404.jpg" alt="<?php echo $boletin['cabeza']; ?>"  width="250" height="300" /> </a><?php } ?>
 								<span class="text-muted m-l-sm pull-right">
         	<i class="fa fa-calendar-o"></i><small><small>
             <?php echo $fecha[2]."&bull; ".$fecha[1]."&bull; ".$fecha[0]; ?>	</small></small>	</span>
@@ -24,7 +24,7 @@
 								<p>
 									<?php echo substr($boletin['sumario'],0,80)."..."; ?>
 								</p>
-							</a>
+							
 						</div>
 						<?php }  ?>                  
 					</div>
@@ -40,11 +40,9 @@
 								<div class="item">                              
                                                             
                                 <?php if (file_exists("../../extension/carteles/".$cartel['imagen'])){ ?>
-							<a href="#" target="_top"> <img src="../../extension/carteles/<?php echo $cartel['imagen']; ?>" alt="<?php echo $cartel['titulo']; ?>" width="250" height="300"  /> </a> <?php } else{ ?>
-                           <a href="#" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $cartel['titulo']; ?>"  width="250" height="300" /></a>
-                            <?php } ?>
-                            
-								
+							<a href="<?php echo $cartel['link']; ?>" target="_top"> <img src="../../extension/carteles/<?php echo $cartel['imagen']; ?>" alt="<?php echo $cartel['titulo']; ?>" width="250" height="300"  /> </a> <?php } else{ ?>
+                           <a href="<?php echo $cartel['link']; ?>" target="_top"><img src="../../extension/carteles/cartel404.jpg" alt="<?php echo $cartel['titulo']; ?>"  width="250" height="300" /></a>
+                            <?php } ?>								
 								</div>
 							<?php } ?>
 					</div>

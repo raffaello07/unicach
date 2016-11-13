@@ -15,7 +15,7 @@
                 	<?php
 						include('../src/dbconex.php');
 						$grupoTitulo='';
-						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='1'  ORDER BY orden asc");
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='1' AND publicar='1'  ORDER BY orden asc");
 						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5><?php } ?>
 						<ul class="footer-list">
@@ -27,7 +27,7 @@
 					<div class="col-sm-4 footer-col">
 						<?php
 						$grupoTitulo='';
-						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='2'  ORDER BY orden asc");
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='2' AND publicar='1' ORDER BY orden asc");
 						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
@@ -38,7 +38,7 @@
 					<div class="col-sm-3 footer-col">
 						<?php
 						$grupoTitulo='';
-						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='3'  ORDER BY orden asc");
+						$result=$db_conexion->query("SELECT  *FROM  cat_footer WHERE columna='3' AND publicar='1' ORDER BY orden asc");
 						while($row = $result->fetch_assoc()) { if ($grupoTitulo<>$row['grupo']){?>
 						<h5 class="h5"><strong><?php echo $row['grupo']; ?></strong></h5> <?php } ?>
 						<ul class="footer-list">
