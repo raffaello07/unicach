@@ -15,20 +15,20 @@
 
 	<header id="main-header" class="clearfix">
    
-        <div id="header-full" class="clearfix">
-            <div id="header" class="clearfix">
-                <a href="#nav" class="open-menu">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				    <span class="icon-bar"></span>
-				</a>
-                <a href="./" id="logo"><img src="./images/logo.png" data-retina="images/logo-retina.png" alt="Universidad de Ciencias y artes de Chiapas" /></a>
+    	<div class="logoHeader">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 brand">
+						<a class="brand-link" href="index.php">
+							<img src="images/logo.png" class="img-responsive brand-logo" alt="UNICACH Logo">
+							<h1 class="brand-name">Universidad de Ciencias y Artes de Chiapas</h1>
+						</a>
+					</div>
                 
-              <?php  include('../templates/divredes.php');?>
-
-            </div>
-			
-        </div>
+					<?php  include('../templates/divredes.php');?>
+            	</div>
+        	</div>
+    	</div>
        <?php   include('../templates/divmenu.php'); ?>
                       
     </header>

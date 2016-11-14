@@ -1,6 +1,7 @@
 <?php 
 	header('Content-Type: text/html; charset=iso-8859-1');
 	date_default_timezone_set("America/Mexico_City"); 
+	$grupo = base64_decode(isset($_GET['tag']) ? $_GET['tag'] : NULL);
 	include('../templates/divheader.php');
 
 
@@ -16,23 +17,27 @@
 		
 	?>
 <body class="about about-body" style="background-image: url(images/header/<?php echo $imgHeader; ?>);">
-	<header id="main-header" class="clearfix">
-        <div id="header-full" class="clearfix">
-            <div id="header" class="clearfix">
-                <a href="#nav" class="open-menu">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				    <span class="icon-bar"></span>
-				</a>
-                <a href="./" id="logo"><img src="./images/logo.png" data-retina="images/logo-retina.png" alt="Universidad de Ciencias y artes de Chiapas" /></a>
+	
+    <header id="main-header" class="clearfix">
+   
+    	<div class="logoHeader">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 brand">
+						<a class="brand-link" href="index.php">
+							<img src="images/logo.png" class="img-responsive brand-logo center-block" alt="UNICACH Logo">
+							<h1 class="brand-name">Universidad de Ciencias y Artes de Chiapas</h1>
+						</a>
+					</div>
                 
-              <?php  include('../templates/divredes.php');?>
-                
-            </div>
-        </div>
+					<?php  include('../templates/divredes.php');?>
+            	</div>
+        	</div>
+    	</div>
+       <?php   include('../templates/divmenu.php'); ?>
+                      
+    </header>
        <?php
-       $grupo = base64_decode(isset($_GET['tag']) ? $_GET['tag'] : NULL);
-	   include('../templates/divmenu.php');
 	   
 	   $result_sub=$db_conexion->query("SELECT * FROM cat_informacion WHERE url_friendly='".$grupo."' ORDER BY id_menu asc");
 	   while($row_sub = $result_sub->fetch_assoc()) {
@@ -42,7 +47,6 @@
 		   }
 		
 	   ?>
-    </header>
     <main>
 	    <div class="container-fluid">  
 	        <div class="row content-row">
