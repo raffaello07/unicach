@@ -20,7 +20,7 @@
 .navbar{border: 0px solid black; margin-bottom: 0;}
 .navbar-default{ background-color: #142655;}
 .navbar-default .container{ background-color: #142655; }
-.navbar-enlace{color: #fff !important; font-family: Helvetica, arial !important; padding: 15px 15px !important;}
+.navbar-enlace{color: #fff !important; font-family: Helvetica, arial, sans-serif !important; padding: 15px 15px !important; font-size: 14px;}
 .navbar-enlace:hover, .navbar-enlace:focus, .navbar-element.active .navbar-enlace, .navbar-toggle:focus, .navbar-toggle:hover{ color: white !important; background-color: #010e2d !important; }
 
 .searchform{ margin: 8px 0;}
@@ -106,7 +106,7 @@
 
 @media (max-width: 1199px){
 	
-	#colapsemenu { float: none;}
+	
 }
 
 @media (max-width: 991px) {
@@ -114,6 +114,8 @@
 	.cuid-parrafo{ font-size: 18px;}
 	
 	.cuid-logo{ margin-top: 30px; }
+	
+	#colapsemenu { float: none;}
 }
 
 @media (max-width: 800px){
@@ -125,6 +127,9 @@
 @media (min-width: 768px) and (max-width: 991px) {
 	.searchResults{ margin-top: 10px; left: 16.67%;}
 	.input-group-btn{ width: 40px !important;}
+	
+	.searchform{ width: 100%;   margin: 0;  float: none; padding: 10px;}
+	.searchform-group, .searchform-group .input-group{width: 100%;}
 }
 
 @media (max-width: 767px) {
@@ -144,9 +149,4 @@
 	
 	.brand-logo{ display: block !important; margin-left: auto; margin-right: auto;}
 	
-}
-
-@media (min-width: 768px) and (max-width: 1199px){
-	.searchform{ width: 100%;   margin: 0;  float: none; padding: 10px;}
-	.searchform-group, .searchform-group .input-group{width: 100%;}
 }
