@@ -9,8 +9,10 @@
 	<!-- Eetique que evita hacer la escala de la letra mÃ¡s pequeÃ±a en dispositivos mobiles. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name='robots' content='index,follow' />
+	<meta name="description" content="Formar profesionales calificados en las áreas científicas, humanísticas y técnicas, conocedores de la diversidad cultural y ambiental de la región y del país.">
+	<meta name="google-site-verification" content="aLbkO3Vom-MghZ6xPwzLzNqpGLyZwN3Y8rpgNSxZ5Nw" />
+	<meta name="google-site-verification" content="72MvXrWpRgljN8E9virTNtnvnK6oC8vAZFPfGNnqdvs" />
 	<link rel="stylesheet" type="text/css" media="all" href="./css/style.css" />
 	
     <link rel="stylesheet" type="text/css" media="all" href="./css/stylemobile.css" />
@@ -41,9 +43,7 @@
 			margin-bottom: 0px;
 		}
 	</style>
-	
-	<link rel="icon" type="image/png" href="./images/favicon.png" />
-	<link rel="apple-itouch-icon" href="./images/favicon.png">  
+	 
 	
     <script src="./lib/angular/angular.min.js"></script>
 	<script type="text/javascript" src="./lib/angular/angular-sanitize.min.js"></script>

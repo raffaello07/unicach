@@ -1,0 +1,9 @@
+User-Agent: *
+
+Allow: /
+
+Disallow: /js
+Disallow: /lib
+Disallow: /gcs.php
+
+Sitemap: https://www.unicach.mx/sitemap.xml

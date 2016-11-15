@@ -17,7 +17,7 @@
 		
 	?>
 <body class="about about-body" style="background-image: url(images/header/<?php echo $imgHeader; ?>);">
-	
+	<?php include('../src/googleanalytics.php'); ?>
     <header id="main-header" class="clearfix">
    
     	<div class="logoHeader">

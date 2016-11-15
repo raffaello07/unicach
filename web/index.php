@@ -11,7 +11,7 @@
 ?>
 
 <body class="home">
-
+<?php include('../src/googleanalytics.php'); ?>
 
 	<header id="main-header" class="clearfix">
    
