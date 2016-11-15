@@ -71,7 +71,9 @@
 				<form role="search" action="gcs.php" class="navbar-form navbar-right searchform" ng-controller="BusquedaController">
 					<div class="form-group searchform-group">
 						<div class="input-group">
-							<input type="text" autocomplete="off" name="q" class="form-control searchInput" placeholder="Buscar..." ng-model="queryInput" ng-keypress="buscar(queryInput);">
+							 
+							<input type="text" autocomplete="off" name="q" id="searchInput" class="form-control searchInput" placeholder="Buscar..." ng-model="queryInput" ng-keypress="buscar(queryInput);">
+							<label for="searchInput" class="sr-only">Buscar</label>
 							<span class="input-group-btn">
 							<button class="btn btn-default searchBtn" type="submit"><i class="fa fa-search"></i></button>
 						</span>

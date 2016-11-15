@@ -21,7 +21,7 @@
 					<div class="col-sm-4 brand">
 						<a class="brand-link" href="index.php">
 							<img src="images/logo.png" class="img-responsive brand-logo" alt="UNICACH Logo">
-							<h1 class="brand-name">Universidad de Ciencias y Artes de Chiapas</h1>
+							<h1 class="brand-name sr-only">Universidad de Ciencias y Artes de Chiapas</h1>
 						</a>
 					</div>
                 
